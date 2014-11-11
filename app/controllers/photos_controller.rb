@@ -25,4 +25,18 @@ class PhotosController < ApplicationController
     @photodeets.destroy
   end
 
+  def edit_form
+    @photodeets = Photo.find(params[:id])
+  end
+
+  def update_row
+    @photodeets = Photo.find(params[:id])
+
+    @photodeets.source = params[:the_source]
+    @photodeets.caption = params[:the_caption]
+
+    @photodeets.save
+    render("edited_row")
+  end
+
 end

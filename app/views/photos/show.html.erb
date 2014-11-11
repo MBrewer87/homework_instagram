@@ -1,9 +1,13 @@
-<h1> Photo # <%= @photodeets.id %> </h1>
+<div class="col-md-12">
+  <h1> Photo # <%= @photodeets.id %> </h1>
+</div>
 
-<dl class="dl-horizontal">
-  <dt> <strong> Photo </strong> </dt>
-  <dd><img src="<%= @photodeets.source %>"></dd>
+<div class="col-md-12">
+  <dl class="dl-horizontal">
+    <dt> <strong> Photo </strong> </dt>
+    <dd><img src="<%= @photodeets.source %>"></dd>
 
-  <dt> <strong> Caption </strong> </dt>
-  <dd> <%= @photodeets.caption %> </dd>
-</dl>
+    <dt> <strong> Caption </strong> </dt>
+    <dd> <%= @photodeets.caption %> </dd>
+  </dl>
+</div>
